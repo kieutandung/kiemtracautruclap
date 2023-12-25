@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="birthday">ngày sinh</label>
+    <input type="number" name="birthday" id="birthday">
+    <button onclick="indayso()">kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function inDaySo() {
+            var ngaysinh = document.getElementById('birthday').value;
+            var output = "";
+            if (ngaySinh % 2 === 0) {
+                for (var i = 0; i <= ngaySinh; i += 2) {
+                    output += i + ", ";
+                }
+            } else {
+                for (var i = 1; i <= ngaySinh; i += 2) {
+                    output += i + ", ";
+                }
+            }
+            document.getElementById('result').innerText = output.slice(0, -2); 
+        }
+    </script>
+</body>
+</html>

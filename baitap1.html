@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <label for="birthday">ngày sinh</label>
+    <input type="number" name="birthday" id="birthday">
+    <button onclick="checkBirthday()">kiểm tra</button>
+    <p id="result"></p>
+    <script>
+        function checkBirthday(){
+            var birthdayValue = document.getElementById('birthday').value;
+            if (birthdayValue % 2 === 0) {
+                document.getElementById('result').innerText = birthdayValue + " là số chẵn";
+            } else {
+                document.getElementById('result').innerText = birthdayValue + " là số lẻ";
+            }
+        }
+    </script>
+</body>
+</html>
